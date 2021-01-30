@@ -1,0 +1,13 @@
+[+] Create directory structure
+[+] create npm project and install all dependencies
+        - express
+        - ejs
+        - express-ejs-layouts
+    dev dependencies
+        -nodemon
+[+] Create Express server - create a server.js file
+[.] create create Homepage using html & css
+        -include tailwind css
+[.] create the cart page
+    -order summery section
+    -empty cart section
