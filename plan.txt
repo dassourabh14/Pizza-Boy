@@ -6,8 +6,16 @@
     dev dependencies
         -nodemon
 [+] Create Express server - create a server.js file
-[.] create create Homepage using html & css
+[+]Install laravel mix
+[.+ Install telwin css
+[+] create create Homepage using html & css
         -include tailwind css
-[.] create the cart page
+[+] create the cart page
     -order summery section
     -empty cart section
+[.] Move Routes to routes file
+[.] create dedicated controllers
+        -connect to mongoDB
+        -use connect-mongo for session store
+        -dependencies
+                -mongoose,express-session,connect-mongo,dotenv

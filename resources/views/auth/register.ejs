@@ -1,0 +1,29 @@
+<div class="container mx-auto text-center my-10">
+<div class="regis">
+    REGISTER
+</div>
+<% if(messages.error){%>
+<span class="text-red-500 text-lg"><%=messages.error%></span>
+<%}%>
+<div>
+<form action="/register" method="POST" class="my-10 wrp mx-auto text-center px-7 py-6">
+    <label for="itext" >First Name:</label>
+    <input type="text" name="fname" id="itext" class="frm" placeholder="eg: Faroque" value="<%=messages.fname%>">
+    <label for="itextl" >Last Name:</label>
+    <input type="text" name="lname" id="itextl" class="frm" placeholder="eg: Minja" value="<%=messages.lname%>">
+    <br>
+    <label for="iem">Email:</label>
+    <input type="email" name="email" id="iem" class="frm" placeholder="eg: faroqueminja69@gmail.com" style="width: 400px " value="<%=messages.email%>">
+    <br>
+    <label for="ieml">Re-enter Email:</label>
+    <input type="email" name="reemail" id="ieml" class="frm" placeholder="eg: faroqueminja69@gmail.com" style="width: 330px;"  value="<%=messages.reemail%>">
+    <br>
+    <label for="ipass">Password:</label>
+    <input type="password" name="pass" id="ipass" placeholder="*******" class="frm" style="width: 374px;">
+    <br>
+    <label for="ipassw">Re-enter password:</label>
+    <input type="password" name="repass" id="ipassw" placeholder="*******" class="frm"><br>
+    <button type="submit"  id="su">REGISTER</button>
+</form>
+</div>
+</div>

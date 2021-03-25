@@ -1,0 +1,30 @@
+<div>
+
+    <div class=" boip text-center mx-auto my-9">
+    
+        <div class="container mx-auto text-center my-6 log" >
+        LOGIN
+        </div>
+        <div class="text-center" >
+            <% if(messages.error){%>
+                <span class="text-red-500 text-lg"><%=messages.error%></span>
+                <%}%>
+            <form action="/login" method="POST">
+                    <label for="fname">Email</label><br>
+                    <input name="email" type="email" id="fname" class="fn" placeholder="eg:faroqueminja69@gmail.com"><br>
+                    <label for="fpass">Password</label><br>
+                    <input name="password" type="password" id="fpass" class="fn"  placeholder="************"><br>
+                    <br>
+                    <button>
+                        <input type="submit" value="continue" id=logb>
+                    </button>
+                   
+                    
+            </form>
+        </div>
+    </div>
+    <div class="text-center">
+
+        fogot password?? <a href="#" style="text-decoration: underline;color:blue">Click Here</a>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<% if(!session.cart) { %>
+<section class="emptycart">
+    <div class="container mx-auto text-center">
+       <div class="cartemp">U'r Cart Is Empty :( </div>
+    </div>
+    <div class="container mx-auto text-center my-6">
+        You haven't ordered any pizza yet.
+        <br>
+        Go to the main page to order pizzas you like :)
+    </div>
+    <div>
+        <img src="/img/empty-cart.png" alt="empty cart" class="mx-auto cartpic">
+    </div>
+    <div class="container mx-auto text-center my-6">
+        
+       <a href="/" class="main">Main Page</a>
+    </div>
+</section>
+<% } else {%>
+
+
+
+<section class="fullcart">
+<div class="box flex items-center my-9 mx-auto justify-between" style=" width: 700px;">
+    <img src="/img/cart.png" class="h-8">
+    <span id="sum">Order Summery</span>
+</div>
+<div class="wrap mx-auto my-3"style="width:700px">
+
+    <% for(let pizza of Object.values(session.cart.items)) { %>
+    <div class="flex items-center justify-between my-2 peritem">
+        <img src="/img/<%=pizza.item.image%>" alt="" style="width: 120px;">
+        <span class="pname"><%=pizza.item.name%></span>
+        <span class="pname"><%=pizza.qty%> Pcs.</span>
+        <span class="pname">Rs. <%=pizza.item.prize * pizza.qty%>.00</span>
+    </div>
+<%}%>
+  
+    <div class="totamt">
+
+        <span class="Total">Total Amount:</span>
+        <span class="amount"> Rs. <%=session.cart.totalPrice%>.00</span>
+    </div>
+    <%if(user) {%>
+    <div class="inputp">
+        <form action="/orders" method="POST">
+            <input type="text" placeholder="Put Your Address..." class="inp" name="address">
+            <input type="text" placeholder="Put Your Number..." class="mx-5 inp" name="phone">
+            <br>
+            <button>
+                <input type="submit" value="Place Your Order" class="subm">
+            </button>
+       
+           
+        </form>
+        <%} else {%>
+            <br>
+            <a href="/login" class="subm logintocont">Login To Continue</a>
+            <%}%>
+    </div>
+</div>
+</section>
+<% } %>

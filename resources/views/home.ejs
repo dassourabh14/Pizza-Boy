@@ -1,1 +1,35 @@
-<h1>Hallo</h1>
+
+<body class="my-2">
+ 
+<section class="hero flex justify-between">
+    <div class="my-40 mx-10">
+        <div id="big">Hi There...</div>
+        <div id="small">Come On We Are Waiting :)</div>
+        <div class="ordernow mx-20 my-5 px-3 py-1.5"><a href="#menuq">Order Now</a></div>
+                    </div>
+                    <div>
+        <img src="/img/quality-pizza.webp" id="mainphoto">
+                    </div>
+                
+</section>
+<div class="menu container mx-auto" id="menuq">
+    <div class="my-10 see text-center">See What You Are Looking For...</div>
+    <div class="grid grid-cols-4">
+<%pizzas.forEach(function(pizza){%>
+        <div>
+            <div>
+             <img src="/img/<%=pizza.image%>"  class="mx-auto " height="250px" width="250px">
+             <div class="pizn"><%=pizza.name%></div>
+             <div class="sml"><%=pizza.size%></div>
+             <div class="prz">
+                 <span class="rs">Rs : <%=pizza.prize%>.00</span>
+                 <button data-pizza="<%= JSON.stringify(pizza)%>" class="add-to-cart">+ add</button>
+             </div>
+            </div>  
+        </div>
+       <%})%>
+    </div>
+</div>
+</body>
+
+</html>
