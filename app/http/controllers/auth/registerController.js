@@ -20,6 +20,20 @@ function registerController(){
                 req.flash("reemail",reemail);
                 return res.redirect("/register");
             }
+            if(email != reemail){
+                req.flash('error','Email fields should match!!!');
+                req.flash("fname",fname);
+                req.flash("lname",lname);
+                return res.redirect("/register");
+            }
+            if(pass!=repass){
+                req.flash('error',"Password doesn't match");
+                req.flash("fname",fname);
+                req.flash("lname",lname);
+                req.flash("email",email);
+                req.flash("reemail",reemail);
+                return res.redirect("/register");
+            }
     
 //email validation
 User.exists({email: email },(err,result)=>{

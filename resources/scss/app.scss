@@ -116,7 +116,9 @@ font-weight: bold;
     }
 }
 nav{
-    background-image: linear-gradient(270deg,rgb(238, 236, 236),white);
+    
+    background-image: linear-gradient(270deg,rgb(216, 209, 209),white);
+    
 }
 .see{
     font-family:'Potta One', cursive; 
@@ -180,9 +182,10 @@ nav{
     text-align: center;
 }
 .inp{
-    border: 2px solid black;
-    width: 200px;
-    border-radius: 10px;
+    border: 2px solid orange;
+    width: 300px;
+    height: 35px;
+    // border-radius: 10px;
     margin-top: 29px;
     padding-left:5px;
     transition: $flow;
@@ -409,3 +412,72 @@ color:  rgb(170, 169, 169);
 
 
 
+
+// preloader
+.loader_bg{
+    position: absolute;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    top:150px;
+    left: 550px;
+
+}
+.loader:before, .loader:after{
+    content: '';
+    border:1em solid #d31616;
+border-radius: 50%;
+width: inherit;
+height: inherit;
+position: absolute;
+top: 0;
+left: 0;
+animation: loader 2s linear infinite;
+opacity: 0;
+}
+.loader::before{
+    animation-delay: .3s;
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+.pt{
+    border-color: orange;
+    transition: $flow;
+    &:hover{
+        border: 2px solid rgb(66, 195, 255);
+        
+    }
+}
+
+.StripeElement{
+    width: 50%;
+    margin: auto;
+    border:2px solid orange;
+    height: 33px;
+    padding: 7px;
+    transition: $flow;
+    &:hover{
+     
+      
+        border: 2px solid rgb(66, 195, 255);
+    }
+}

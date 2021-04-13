@@ -43,15 +43,22 @@
     </div>
     <%if(user) {%>
     <div class="inputp">
-        <form action="/orders" method="POST">
+        <form action="/orders" method="POST" id="payment-form">
             <input type="text" placeholder="Put Your Address..." class="inp" name="address">
             <input type="text" placeholder="Put Your Number..." class="mx-5 inp" name="phone">
             <br>
+            <br>
+            <div class='mx-auto'>select your payment type:</div>
+            <select name='paymentType' class="form-select mt-1 block w-1/2 mx-auto border-2 pt h-9 mb-5" id='paymentType'> 
+                <option value="cod">Cash On Delivery</option>
+                <option value='card'>Pay By Card</option>
+               
+              </select>
+              <div id='card-element'></div>
             <button>
                 <input type="submit" value="Place Your Order" class="subm">
             </button>
        
-           
         </form>
         <%} else {%>
             <br>
