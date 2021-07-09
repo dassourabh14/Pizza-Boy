@@ -9,7 +9,7 @@ let addToCart=document.querySelectorAll('.add-to-cart')
 let cartCounter=document.querySelector('.cartCounter');
 
 function updateCart(pizza){
- 
+ // post req to server
   axios.post('/update-cart', pizza).then(res=>{
 cartCounter.innerText=res.data.totalQty;
    

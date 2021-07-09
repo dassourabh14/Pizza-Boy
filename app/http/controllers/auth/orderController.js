@@ -82,7 +82,10 @@ function orderController() {
                             console.log(err)
                         })
                     }).catch((err)=>{
-                        delete req.session.cart
+                        delete req.session.cart;
+
+
+                        
                         return res.json({message:'Order Placed but Payment failed...You can pay at delivery time'});
                     })
                 }

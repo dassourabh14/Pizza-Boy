@@ -1,3 +1,4 @@
+
 function cartController(){
     return {
         cart(req,res){
@@ -5,8 +6,16 @@ function cartController(){
             res.render("client/cart");
         },
        update(req,res){
-           //for the first time creating cart and addiing structure
-        if(!req.session.cart){
+        //let cart = {
+        //     items:{
+       //         pizzaId: {item: pizzaObject , qty: 0}
+      //  },
+      //     totalQty: 0,
+     //      totalPrice:0
+    //}
+        //for the first time creating cart and addiing structure
+        
+           if(!req.session.cart){
                 req.session.cart={
                     items:{},
                     totalQty:0,
@@ -34,6 +43,8 @@ cart.totalPrice=cart.totalPrice+req.body.prize;
         cart.totalQty=cart.totalQty+1;
 cart.totalPrice=cart.totalPrice+req.body.prize
     }
+    //we r returning the total qty to the browser bcz we
+    //have to show the total qty at cart image...
            return res.json({totalQty:req.session.cart.totalQty})
 
 

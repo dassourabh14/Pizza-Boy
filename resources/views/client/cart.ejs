@@ -26,7 +26,7 @@
     <span id="sum">Order Summery</span>
 </div>
 <div class="wrap mx-auto my-3"style="width:700px">
-
+<!--it create an array with objects's values -->
     <% for(let pizza of Object.values(session.cart.items)) { %>
     <div class="flex items-center justify-between my-2 peritem">
         <img src="/img/<%=pizza.item.image%>" alt="" style="width: 120px;">

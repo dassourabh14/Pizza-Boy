@@ -57,7 +57,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 //gloval middlewire
 app.use((req,res,next)=>{
-    res.locals.session = req.session;
+    res.locals.session = req.session; //session will act as golval middleware
     res.locals.user=req.user;
     next();
 })

@@ -1,9 +1,9 @@
 {
   "name": "real-time-pizza",
   "version": "1.0.0",
-  "description": "Run Time Pizza App",
+  "description": "Real Time Pizza App",
   "main": "index.js",
-  "author": "Nilkantha",
+  "author": "gourab",
   "scripts": {
     "serve": "node server.js ",
     "dev": "nodemon server.js",
